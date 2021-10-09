@@ -1,0 +1,40 @@
+.select-user{
+    width:200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-user-avatar{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: auto;
+}
+
+.login-password{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.login-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;  
+    margin-bottom: 10px;    
+}
+
+.login-form{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    width: 50%;
+    height: auto;
+}

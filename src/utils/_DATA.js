@@ -10,7 +10,7 @@ let users = {
       "loxhs1bqm25b708cmbf3g": 'optionTwo'
     },
     questions: ['8xf0y6ziyjabvozdd253nd', 'am8ehyc8byjqgar0jgpub9'],
-    password:""
+    password:"123"
   },
   tylermcginnis: {
     id: 'tylermcginnis',
@@ -21,7 +21,7 @@ let users = {
       "xj352vofupe1dqz9emx13r": 'optionTwo',
     },
     questions: ['loxhs1bqm25b708cmbf3g', 'vthrdm985a262al8qx3do'],
-    password:""
+    password:"123"
   },
   johndoe: {
     id: 'johndoe',
@@ -33,7 +33,7 @@ let users = {
       "6ni6ok3ym7mf1p33lnez": 'optionTwo'
     },
     questions: ['6ni6ok3ym7mf1p33lnez', 'xj352vofupe1dqz9emx13r'],
-    password:""
+    password:"123"
   }
 }
 
