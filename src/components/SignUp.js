@@ -17,8 +17,8 @@ class SignUp extends Component{
     currentPassword = null;
 
     componentDidMount(){
-        console.log("MOUNTED")
         this.avatarList = this.avatarSeedGenerator(60);
+        this.forceUpdate();
     }
 
     submitUser = ()=>{
