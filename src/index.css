@@ -3,6 +3,40 @@
     font-weight: bold;
 }
 
+.nav-bar-item-text{
+    color: black;
+    top: -5px;
+    position: absolute;
+    text-align:center;
+    width: 100px;
+}
+
+.nav-bar-link{
+    text-decoration: none;
+}
+
+.trapezoid {
+    position: relative;
+    font-weight: bold;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-bottom: 40px solid white;
+    width: 100px;
+}
+
+.trapezoid:hover {
+    border-bottom: 40px solid cornflowerblue;
+}
+
+.nav-bar{
+    border-radius: 20px;
+    border-style: solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 40px;
+}
+
 .input-pass{
     color: green;
     font-weight: bold;

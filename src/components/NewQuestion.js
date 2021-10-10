@@ -4,11 +4,11 @@ import {connect} from 'react-redux'
 
 
 
-class LogOut extends Component{
+class NewQuestion extends Component{
     render(){
         return(
             <h1>
-                Logout
+                NewQuestion
             </h1>
         )
     }
@@ -17,4 +17,4 @@ class LogOut extends Component{
 
 
 
-export default connect()(LogOut)
+export default connect()(NewQuestion)

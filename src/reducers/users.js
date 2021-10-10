@@ -2,7 +2,6 @@ import { RECEIVE_USERS } from "../actions/users";
 import { ADD_USER } from "../actions/addNewUser";
 
 export default function users (state = {}, action) {
-    console.log(action)
     switch(action.type) {
         case RECEIVE_USERS :
             return {

@@ -4,8 +4,8 @@ import {connect} from 'react-redux'
 import {handleInitialData} from '../actions/shared'
 import AppHome from './AppHome'
 import LogIn from './LogIn'
-import LogOut from './LogOut'
 import SignUp from './SignUp'
+import NewQuestion from './NewQuestion'
 
 class App extends Component{
     componentDidMount() {
@@ -15,16 +15,18 @@ class App extends Component{
         return(
             this.props.authedUser === null?
                 <div>
-                    <Route exact path='/login' render ={()=>(<LogIn />)}/> 
                     <Route exact path='/signup' render ={()=>(<SignUp />)}/>
+                    <Route exact path='/login' render ={()=>(<LogIn />)}/> 
                     <Route exact path='/' render ={()=>(<LogIn />)}/>
                     <Route exact path='/home' render ={()=>(<LogIn />)}/>
+                    <Route exact path='/newquestion' render ={()=>(<LogIn />)}/>
                 </div>:
                 <div>
-                    <Route exact path='/' render ={()=>(<LogOut />)}/>
+                    <Route exact path='/' render ={()=>(<AppHome />)}/>
                     <Route exact path='/login' render ={()=>(<LogIn />)}/> 
                     <Route exact path='/signup' render ={()=>(<SignUp />)}/> 
                     <Route exact path='/home' render ={()=>(<AppHome />)}/> 
+                    <Route exact path='/newquestion' render ={()=>(<NewQuestion />)}/>
                 </div>
         )
     }
