@@ -1,12 +1,30 @@
+.input-error{
+    color: red;
+    font-weight: bold;
+}
+
+.input-pass{
+    color: green;
+    font-weight: bold;
+}
+
 .select-user{
-    width:200px;
-    display: block;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
 }
 
+.select-user-menu{
+    width: 250px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 .login-user-avatar{
-    display: block;
+    margin-top: 20px;
+    display: inline-flex;
     margin-left: auto;
     margin-right: auto;
     width: 150px;
@@ -14,27 +32,111 @@
 }
 
 .login-password{
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;    
 }
 
-.login-button{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.login-form-buttons{
+    display: flex; 
+    justify-content: space-evenly;
+}
+
+
+.signup-form-buttons{
+    display: flex; 
+    justify-content: space-evenly;
+}
+
+.submit-button{
+    border-radius: 10px;
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.sign-up-button{
+    border-radius: 10px;
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
     margin-left: auto;
     margin-right: auto;  
-    margin-bottom: 10px;    
+}
+
+.login-button{
+    border-radius: 10px;
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;    
 }
 
 .login-form{
-    display: block;
+    border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 100px;
     border-style: solid;
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 300px;
+    align-content: space-between;
+}
+
+.sign-up-form{
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 300px;
+    align-content: space-between;    
+}
+
+.avatar-sign-up-list{
+    border-style: groove;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width:400px;
+    overflow-y: auto;
+    height: 100px;
+}
+
+.sign-up-avatar{
+    float: left;
+    margin-top: 10px;
+    justify-content: center;
+    display: inline-flex;
+    width: 60px;
     height: auto;
+}
+
+.sign-up-avatar:hover{
+    cursor: pointer;
+}
+
+.sign-up-form-subset{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.sign-up-info{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content:center;
+    margin-left: auto;
+    margin-right: auto;  
 }

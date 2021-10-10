@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {successLogIn} from '../actions/shared'
 
@@ -33,7 +34,7 @@ class LogIn extends Component{
     verifyPassword = () => {
         this.state.password === this.state.inputPassword ? 
         this.props.dispatch(successLogIn(this.state.selectedId)):
-        false
+        alert("Wrong Password!")
     }
 
     render(){
@@ -42,8 +43,8 @@ class LogIn extends Component{
                 <div className="login-user-avatar">
                     <img src={this.state.avatar}/>
                 </div>
-                <div>
-                    <select className="select-user" onChange={this.updateState} value={this.state.value}>
+                <div className="select-user">
+                    <select  className="select-user-menu" onChange={this.updateState} value={this.state.value}>
                         <option value="selectuser" disabled>Select User</option>
                         {
                             this.props.usersArray.map((user)=> 
@@ -53,8 +54,8 @@ class LogIn extends Component{
                         }
                     </select>
                 </div>
-                <div>
-                    <p className="login-password">Password: 
+                <div className="login-password">
+                    <p>Password: 
                         <input 
                             maxLength="10" 
                             disabled={this.state.selectedId === null} 
@@ -62,13 +63,21 @@ class LogIn extends Component{
                             onChange={this.updateInputPassword}/>                   
                     </p>
                 </div>
-                <div>
-                    <button 
-                        onClick={this.verifyPassword}
-                        className="login-button" 
-                        disabled={this.state.inputPassword === null || this.state.inputPassword.length < 3 }> 
-                            LogIn 
-                    </button>
+                <div className="login-form-buttons">
+                    <Link className="login-button" to ='/home'>    
+                        <button 
+                            onClick={this.verifyPassword}
+                            className="login-button" 
+                            disabled={this.state.inputPassword === null || this.state.inputPassword.length < 3 }> 
+                                LogIn 
+                        </button>
+                    </Link>
+                    <Link className="sign-up-button" to='/signup'>
+                        <button 
+                            className="sign-up-button"> 
+                                Sign Up 
+                        </button>
+                    </Link>
                 </div>
             </div>
         )
