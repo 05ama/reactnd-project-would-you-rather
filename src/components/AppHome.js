@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom';
 import {connect} from 'react-redux'
 import NavBar from './NavBar';
+import QuestionsMain from './QuestionsMain';
 
 
 class AppHome extends Component{
@@ -9,8 +9,8 @@ class AppHome extends Component{
         return(
             <div>
                 <NavBar/>
-                <div>
-                    BODY
+                <div className="app-main-container">
+                    <QuestionsMain  />
                 </div>
             </div>
         )

@@ -3,6 +3,116 @@
     font-weight: bold;
 }
 
+.question-text{
+    display: inline-block;
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    height: 20px;
+}
+
+.poll-btn{
+    text-align: center;
+    padding: auto;
+    width: 250px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.question-content{
+    width: 360px;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    border: hotpink;
+    border-style:solid;
+    border-radius: 20px; 
+    height: 90px;
+}
+
+.question-author{
+    cursor: default;
+    width: 360px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    margin-bottom: 0px;
+    border: hotpink;
+    border-style:solid;
+    border-radius: 20px;
+    height: 20px;
+}
+
+.question-card-container{
+    height:150px;
+    width: 400px;  
+    border-style: solid;
+    border-radius: 20px;  
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.questions-list::-webkit-scrollbar-thumb {
+    background: #000; 
+    border-radius: 5px;
+
+}
+
+.questions-list::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;    
+}
+
+.questions-list{
+    overflow-y: auto;
+    overflow-x: hidden;
+    list-style-type: none;
+    height: 475px;
+    display: flex;
+    justify-content:center;
+}
+
+.question-list-item{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.questions-main-container{
+    margin: auto;
+    height: 100px;
+}
+
+.nav-bar-item{
+    width: auto;
+}
+
+.nav-bar-welcome-img{
+    top: 2px;
+    width: 30px; 
+    position: relative;
+    border-radius: 50%;
+    border-style:ridge;
+}
+
+.nav-bar-welcome-text{
+    cursor:default;
+    top: -5px;
+    float: left;
+    color: black;
+    position: relative;
+    text-align:center; 
+    margin-right: 20px; 
+    margin-left: 20px; 
+}
+
 .nav-bar-item-text{
     color: black;
     top: -5px;
@@ -16,6 +126,8 @@
 }
 
 .trapezoid {
+    margin-right: 1px;
+    margin-left: 1px;
     position: relative;
     font-weight: bold;
     border-right: 20px solid transparent;
@@ -28,6 +140,50 @@
     border-bottom: 40px solid cornflowerblue;
 }
 
+.questions-main-container-buttons{
+    border-bottom-style: ridge;
+    display: flex; 
+    flex-direction: row;  
+    justify-content: center;
+    width: 450px; 
+}
+
+.questions-main-buttons{
+    width: 215px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+.questions-main-buttons:hover{
+    background-color: cornflowerblue;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.questions-main-buttons-selected{
+    background-color: cornflowerblue;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.app-main-container{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-width: 450px;
+    max-width: 450px;
+    min-height: 500px;
+    border-style: ridge;
+    border-radius: 20px;
+}
+
 .nav-bar{
     border-radius: 20px;
     border-style: solid;
@@ -35,6 +191,7 @@
     flex-direction: row;
     justify-content: center;
     height: 40px;
+    min-width: 900px;
 }
 
 .input-pass{
@@ -111,6 +268,8 @@
 }
 
 .login-form{
+    font-weight: bold;
+    background-color: rgb(248, 222, 224);
     border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -124,6 +283,8 @@
 }
 
 .sign-up-form{
+    background-color: rgb(245, 234, 234);
+    font-weight: bold;
     border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -137,6 +298,7 @@
 }
 
 .avatar-sign-up-list{
+    background-color: white;
     border-style: groove;
     border-radius: 10px;
     margin-top: 10px;

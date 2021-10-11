@@ -35,6 +35,10 @@ class NavBar extends Component{
                     </div>
                 </div>
                 <div className="nav-bar-item" >
+                    <img className="nav-bar-welcome-img" src={this.props.users[this.props.authedUser].avatarURL}/>
+                    <p className="nav-bar-welcome-text"> Hello, {this.props.users[this.props.authedUser].name}</p>
+                </div>
+                <div className="nav-bar-item" >
                     <div className="trapezoid">
                         <Link onClick={this.logOut} className="nav-bar-link" to='/'>
                             <p className="nav-bar-item-text"> LogOut </p>
@@ -47,5 +51,11 @@ class NavBar extends Component{
     
 }
 
+function mapStateToProps ({ authedUser , users }) {
+    return {
+        authedUser,
+        users,
+    }
+}
 
-export default connect()(NavBar)
+export default connect(mapStateToProps)(NavBar)

@@ -4,14 +4,14 @@ import {connect} from 'react-redux'
 import NavBar from './NavBar';
 
 
-class NewQuestion extends Component{
+class LeaderBoard extends Component{
     render(){
         return(
         <div>
             <NavBar/>
             <div className="app-main-container">   
                 <h1>
-                NewQuestion
+                LeaderBoard
                 </h1> 
             </div>
         </div>
@@ -22,4 +22,4 @@ class NewQuestion extends Component{
 
 
 
-export default connect()(NewQuestion)
+export default connect()(LeaderBoard)
