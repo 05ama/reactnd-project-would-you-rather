@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom';
+import { withRouter } from "react-router";
 import {connect} from 'react-redux'
 import {addNewUser} from '../actions/shared'
 
@@ -28,7 +28,8 @@ class SignUp extends Component{
             name:this.currentUserName,
             avatarURL:this.currentSelectedAvatarUrl,
             password:this.currentPassword}
-        this.props.dispatch(addNewUser(user))
+        this.props.dispatch(addNewUser(user));
+        this.props.history.push('/home') ;
     }
 
     checkUserName = (event)=>{
@@ -120,7 +121,6 @@ class SignUp extends Component{
                             ></input></p>
                         </div>
                         <div className="signup-form-buttons">
-                            <Link to='/login'>
                                 <button 
                                     disabled={  this.state.inValidUserInput || 
                                                 this.state.inValidUserPassword || 
@@ -130,7 +130,6 @@ class SignUp extends Component{
                                     onClick={this.submitUser}>
                                     Submit
                                 </button>
-                            </Link>
                         </div>
                     </div>
                 }
@@ -150,4 +149,4 @@ function mapStateToProps ({ authedUser , users }) {
     }
 }
 
-export default connect(mapStateToProps)(SignUp)
+export default withRouter(connect(mapStateToProps)(SignUp))

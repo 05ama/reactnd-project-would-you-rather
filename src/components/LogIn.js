@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
+import { withRouter } from "react-router";
 import {successLogIn} from '../actions/shared'
 
 class LogIn extends Component{
@@ -32,9 +32,18 @@ class LogIn extends Component{
     }
 
     verifyPassword = () => {
-        this.state.password === this.state.inputPassword ? 
-        this.props.dispatch(successLogIn(this.state.selectedId)):
-        alert("Wrong Password!")
+        if(this.state.password === this.state.inputPassword) 
+        {
+            this.props.dispatch(successLogIn(this.state.selectedId));
+            this.props.history.push('/home') 
+        }else{
+            alert("Wrong Password!")
+        }
+        
+    }
+
+    signUp = () => {
+        this.props.history.push('/signup')
     }
 
     render(){
@@ -63,21 +72,18 @@ class LogIn extends Component{
                             onChange={this.updateInputPassword}/>                   
                     </p>
                 </div>
-                <div className="login-form-buttons">
-                    <Link className="login-button" to ='/home'>    
-                        <button 
-                            onClick={this.verifyPassword}
-                            className="login-button" 
-                            disabled={this.state.inputPassword === null || this.state.inputPassword.length < 3 }> 
-                                LogIn 
-                        </button>
-                    </Link>
-                    <Link className="sign-up-button" to='/signup'>
-                        <button 
-                            className="sign-up-button"> 
-                                Sign Up 
-                        </button>
-                    </Link>
+                <div className="login-form-buttons">   
+                    <button 
+                        onClick={this.verifyPassword}
+                        className="login-button" 
+                        disabled={this.state.inputPassword === null || this.state.inputPassword.length < 3 }> 
+                            LogIn 
+                    </button>
+                    <button 
+                        onClick={this.signUp}
+                        className="sign-up-button"> 
+                            Sign Up 
+                    </button>
                 </div>
             </div>
         )
@@ -93,4 +99,4 @@ function mapStateToProps ({ users }) {
     }
 }
 
-export default connect(mapStateToProps)(LogIn)
+export default withRouter(connect(mapStateToProps)(LogIn))

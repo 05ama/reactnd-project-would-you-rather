@@ -5,9 +5,10 @@ import {handleInitialData} from '../actions/shared'
 import AppHome from './AppHome'
 import LogIn from './LogIn'
 import SignUp from './SignUp'
+import Error from './Error'
 import NewQuestion from './NewQuestion'
 import LeaderBoard from './LeaderBoard'
-import Error from './Error'
+import LocalRouter from './LocalRouter'
 
 class App extends Component{
     componentDidMount() {
@@ -18,13 +19,8 @@ class App extends Component{
             this.props.authedUser === null?
                 <div>
                     <Switch>
-                        <Route exact path='/' render ={()=>(<LogIn />)}/>
                         <Route exact path='/signup' render ={()=>(<SignUp />)}/>
-                        <Route exact path='/login' render ={()=>(<LogIn />)}/> 
-                        <Route exact path='/home' render ={()=>(<LogIn />)}/>
-                        <Route exact path='/newquestion' render ={()=>(<LogIn />)}/>
-                        <Route exact path='/leaderboard' render ={()=>(<LogIn />)}/>
-                        <Route path ="*" render ={()=>(<Error />)}/>
+                        <Route path ="*" render ={()=>(<LogIn />)}/>
                     </Switch>
                 </div>:
                 <div>
@@ -35,7 +31,8 @@ class App extends Component{
                         <Route exact path='/home' render ={()=>(<AppHome />)}/> 
                         <Route exact path='/newquestion' render ={()=>(<NewQuestion />)}/>
                         <Route exact path='/leaderboard' render ={()=>(<LeaderBoard />)}/>
-                        <Route path ="*" render ={()=>(<LocalRouter />)}/>
+                        <Route path='/error' render ={()=>(<Error />)}/>
+                        <Route path ="*/:id" render ={()=>(<LocalRouter />)}/>
                     </Switch>
                 </div>
         )
