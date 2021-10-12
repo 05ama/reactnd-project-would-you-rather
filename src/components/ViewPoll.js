@@ -69,7 +69,7 @@ class ViewPoll extends Component{
                                 {optionOneVoted?<legend>&spades; You would rather </legend>:""}
                                 <p className="poll-bar-option-text">{this.props.questionOptionOne.text}</p>
                                 <div className="poll-bar">
-                                    <div className="poll-bar-progress" style={{width:((totalOptionOneVoters/TotalVoters)*100)+"%"}}><p className="poll-bar-text">{Math.round(totalOptionOneVoters/TotalVoters*100)}%</p></div>
+                                    <div className="poll-bar-progress" style={{width:((totalOptionOneVoters/TotalVoters)*100)+"%"}}><p className="poll-bar-text">{Math.round(((totalOptionOneVoters/TotalVoters)) * 1000)/10}%</p></div>
                                 </div>
                                 <p className="voters-text">{totalOptionOneVoters} out of {TotalVoters} votes</p>
                             </fieldset>
@@ -77,7 +77,7 @@ class ViewPoll extends Component{
                                 {optionTwoVoted?<legend>&spades; You would rather </legend>:""}
                                 <p className="poll-bar-option-text">{this.props.questionOptionTwo.text}</p>
                                 <div className="poll-bar">
-                                    <div className="poll-bar-progress" style={{width:((totalOptionTwoVoters/TotalVoters)*100)+"%"}}><p className="poll-bar-text">{Math.round(totalOptionTwoVoters/TotalVoters*100)}%</p></div>
+                                    <div className="poll-bar-progress" style={{width:((totalOptionTwoVoters/TotalVoters)*100)+"%"}}><p className="poll-bar-text">{Math.round(((totalOptionTwoVoters/TotalVoters)) * 1000)/10}%</p></div>
                                 </div>
                                 <p className="voters-text">{totalOptionTwoVoters} out of {TotalVoters} votes</p> 
                             </fieldset>                    

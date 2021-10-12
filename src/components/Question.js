@@ -17,7 +17,7 @@ class Question extends Component{
                 </div>
                 <div className="question-content">
                     <img className="sign-up-avatar" src={this.props.users[this.props.data.author].avatarURL}/>
-                    <h4 className="question-text" style={{fontWeight :"bold"}}>Would you rather ?</h4>
+                    <h4 className="question-text" style={{fontWeight :"bold"}}>Would you rather </h4>
                     <p className="question-text">{"..."+this.props.questions[this.props.data.id].optionOne.text}</p>
                     <button onClick={this.viewPoll} className="poll-btn">View poll</button>
                 </div>
@@ -27,13 +27,12 @@ class Question extends Component{
 }
 
 
-function mapStateToProps ({  users , questions },{data , answeredFlag}) {
+function mapStateToProps ({  users , questions },{data}) {
 
     return {
         users,
         questions,
         data,
-        answeredFlag
     }
 }
 

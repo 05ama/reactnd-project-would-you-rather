@@ -119,7 +119,8 @@ let questions = {
 }
 
 function generateUID () {
-  return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
+  let newKey = (Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15));
+  return  Object.keys(questions).includes(newKey)? generateUID() : newKey ; 
 }
 
 export function _createUser ({id,name,avatarURL,password}){
