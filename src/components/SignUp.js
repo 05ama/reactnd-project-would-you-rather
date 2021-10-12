@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { withRouter } from "react-router";
 import {connect} from 'react-redux'
 import {addNewUser} from '../actions/shared'
+import { showLoading, hideLoading } from 'react-redux-loading'
 
 class SignUp extends Component{
     
@@ -17,8 +18,10 @@ class SignUp extends Component{
     currentPassword = null;
 
     componentDidMount(){
+        this.props.dispatch(showLoading())
         this.avatarList = this.avatarSeedGenerator(60);
         this.forceUpdate();
+        this.props.dispatch(hideLoading())
     }
 
     submitUser = ()=>{
