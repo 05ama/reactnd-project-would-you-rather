@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
-import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router'
 
 
 class Question extends Component{
 
+    viewPoll = ()=>{
+        this.props.history.push("/"+this.props.data.id);
+    }
 
     render(){
         return(
@@ -16,14 +19,7 @@ class Question extends Component{
                     <img className="sign-up-avatar" src={this.props.users[this.props.data.author].avatarURL}/>
                     <h4 className="question-text" style={{fontWeight :"bold"}}>Would you rather ?</h4>
                     <p className="question-text">{"..."+this.props.questions[this.props.data.id].optionOne.text}</p>
-                    {this.props.answeredFlag === true?
-                        <Link to={"/"+this.props.data.id}>
-                            <button className="poll-btn">View poll</button>
-                        </Link>:
-                        <Link to={"/"+this.props.data.id}>
-                            <button className="poll-btn">View poll</button>
-                        </Link>
-                    }
+                    <button onClick={this.viewPoll} className="poll-btn">View poll</button>
                 </div>
             </div>
         )
@@ -31,10 +27,9 @@ class Question extends Component{
 }
 
 
-function mapStateToProps ({ authedUser , users , questions },{data , answeredFlag}) {
+function mapStateToProps ({  users , questions },{data , answeredFlag}) {
 
     return {
-        authedUser,
         users,
         questions,
         data,
@@ -42,4 +37,4 @@ function mapStateToProps ({ authedUser , users , questions },{data , answeredFla
     }
 }
 
-export default connect(mapStateToProps)(Question)
+export default withRouter(connect(mapStateToProps)(Question))

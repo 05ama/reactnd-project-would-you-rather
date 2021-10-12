@@ -3,6 +3,83 @@
     font-weight: bold;
 }
 
+.asked-by{
+    text-align: center;
+    width: 150px;
+    font-size: 15px;
+}
+legend{
+    font-weight: bold;
+}
+
+.voters-text{
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0px;
+    text-align: center;
+}
+
+fieldset {
+    border: 1px solid #000;
+    border-radius: 20px;
+    background-color:rgb(245, 236, 224);
+    margin-bottom: 3px;
+}
+
+.poll-bar-text{
+    color: white;
+    padding: 0px;
+    padding-top: 2px;
+    margin-right: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.poll-bar{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height:24px;
+    background-color:white;
+    border-color: black;
+    border-style: solid;
+    border-radius: 20px;
+}
+
+.poll-bar-progress{
+    height:24px;
+    background-color: rgb(9, 209, 176);
+    border-radius: 20px;
+    text-align:right;
+}
+
+.poll-bar-option-text{
+    margin: 0px;
+}
+
+.poll-container{
+    display: inline-flex;
+    flex-direction: column;
+    width : 250px;
+}
+
+.poll-user-avatar{
+    margin : 0px;
+    display: inline-flex;
+    width: 150px;
+    height: auto;
+}
+
+.poll-text{
+    margin-bottom: 5px;
+    margin-top: 0px;
+    width: 250px;
+    padding: 5px;
+    word-wrap: break-word;
+    border: hotpink;
+    border-style:solid;
+    border-radius: 20px;
+}
+
 .question-text{
     display: inline-block;
     width: 150px;
@@ -21,6 +98,14 @@
     text-align: center;
     padding: auto;
     width: 250px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.poll-btn-submit{
+    text-align: center;
+    padding: auto;
+    width: 265px;
     border-radius: 20px;
     cursor: pointer;
 }
@@ -170,6 +255,20 @@
     border-radius: 20px;
     color: white;
     font-weight: bold;
+}
+
+.app-main-container-poll{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-width: 450px;
+    max-width: 450px;
+    min-height: 150px;
+    border-style: ridge;
+    border-radius: 20px; 
+    display: flex;  
+    flex-direction: row; 
 }
 
 .app-main-container{

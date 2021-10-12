@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter , Redirect } from "react-router";
 import { connect } from "react-redux"
+import ViewPoll from './ViewPoll';
 
 class LocalRouter extends Component{
     render(){
@@ -9,16 +10,14 @@ class LocalRouter extends Component{
             return <Redirect to='/error'/>;
         }
         else{
-            return <p>HI</p>
+            return <ViewPoll id={questionId}/>;
         }
     }
 
 }
 
-function mapStateToProps ({ authedUser , users , questions }, { id }) {
+function mapStateToProps ({ questions }, { id }) {
     return {
-        authedUser,
-        users,
         questions,
         id
     }

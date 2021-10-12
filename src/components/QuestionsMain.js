@@ -32,8 +32,8 @@ class QuestionsMain extends Component{
                 <div className="questions-list">
                     {
                         this.state.AnsweredSelected === "-selected"?
-                        <ul className="question-list-item">{this.props.answeredByCurrentUserArray.map((ans)=><li className="question-list-item" key={ans.id} ><Question data={ans}  answeredFlag={true}/></li>)}</ul>:
-                        <ul className="question-list-item">{this.props.unAnsweredByCurrentUserArray.map((unAns)=><li className="question-list-item" key={unAns.id}><Question data={unAns}  answeredFlag={false}/></li>)}</ul>
+                        <ul className="question-list-item">{this.props.answeredByCurrentUserArray.map((ans)=><li className="question-list-item" key={ans.id} ><Question data={ans}/></li>)}</ul>:
+                        <ul className="question-list-item">{this.props.unAnsweredByCurrentUserArray.map((unAns)=><li className="question-list-item" key={unAns.id}><Question data={unAns}/></li>)}</ul>
                     }
                 </div>
             </div>

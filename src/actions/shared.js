@@ -4,6 +4,8 @@ import { receiveUsers } from "./users";
 import { addUser } from "./addNewUser";
 import { addQuestion } from "./addQuestion";
 import { setAuthedUser } from "./authentication";
+import { answerQuestion } from "./answerQuestion";
+import { updateUserAnswer } from "./updateUserAnswer";
 
 
 export function handleInitialData () {
@@ -15,6 +17,17 @@ export function handleInitialData () {
             })
     }
 }
+
+export function saveUserQuestionAnswer ({ authedUser, qid, answer }){
+    return (dispatch) => {
+        return saveQuestionAnswer({ authedUser, qid, answer })
+            .then(()=>{
+                dispatch(answerQuestion({ authedUser, qid, answer }))
+                dispatch(updateUserAnswer({ authedUser, qid, answer }))
+            })
+    }
+}
+
 
 export function addNewUser (user){
     return (dispatch) => {
