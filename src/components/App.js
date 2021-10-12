@@ -9,6 +9,7 @@ import Error from './Error'
 import NewQuestion from './NewQuestion'
 import LeaderBoard from './LeaderBoard'
 import LocalRouter from './LocalRouter'
+import LoadingBar from 'react-redux-loading'
 
 class App extends Component{
     componentDidMount() {
@@ -16,7 +17,9 @@ class App extends Component{
     }
     render(){
         return(
-            this.props.authedUser === null?
+            <div>
+                <LoadingBar className="loading"/>
+                {this.props.authedUser === null?
                 <div className="main">
                     <Switch>
                         <Route exact path='/signup' render ={()=>(<SignUp />)}/>
@@ -34,7 +37,8 @@ class App extends Component{
                         <Route path='/error' render ={()=>(<Error />)}/>
                         <Route path ="*/:id" render ={()=>(<LocalRouter />)}/>
                     </Switch>
-                </div>
+                </div>}
+            </div>
         )
     }
 
