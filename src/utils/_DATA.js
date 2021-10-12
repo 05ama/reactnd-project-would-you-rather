@@ -119,6 +119,7 @@ let questions = {
 }
 
 function generateUID () {
+  /* Confirm ID is unique */
   let newKey = (Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15));
   return  Object.keys(questions).includes(newKey)? generateUID() : newKey ; 
 }

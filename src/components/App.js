@@ -17,13 +17,13 @@ class App extends Component{
     render(){
         return(
             this.props.authedUser === null?
-                <div>
+                <div className="main">
                     <Switch>
                         <Route exact path='/signup' render ={()=>(<SignUp />)}/>
                         <Route path ="*" render ={()=>(<LogIn />)}/>
                     </Switch>
                 </div>:
-                <div>
+                <div className="main">
                     <Switch>
                         <Route exact path='/' render ={()=>(<AppHome />)}/>
                         <Route exact path='/login' render ={()=>(<LogIn />)}/> 

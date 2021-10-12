@@ -25,7 +25,7 @@ class NewQuestion extends Component{
     }
 
     optionOneCheck = (event) => {
-        if(event.target.value.length > 5 ){
+        if(event.target.value.length > 5 && event.target.value !== this.optionTwoText){
             this.setState(()=>({
                 enableOption1Submit:false
             }))
@@ -40,7 +40,7 @@ class NewQuestion extends Component{
     }
 
     optionTwoCheck = (event) => {
-        if(event.target.value.length > 5 ){
+        if(event.target.value.length > 5 && event.target.value !== this.optionOneText){
             this.setState(()=>({
                 enableOption2Submit:false
             }))

@@ -3,6 +3,117 @@
     font-weight: bold;
 }
 
+.main{
+    min-width: fit-content ;
+}
+
+.board-user-scores{
+    cursor: default;
+    padding: 10px;
+    padding-top: 20px;
+    padding-left: 10px;
+    width: 200px;
+    text-align: left;
+    margin: 0px;
+    margin-top: 20px;
+    border: hotpink;
+    border-style: solid;
+    height: 50px;
+    border-radius: 20px;     
+}
+
+.board-user-score-tag{
+    cursor: default;
+    padding: 5px;
+    width: 50px;
+    text-align: center;
+    margin: 0px;
+    margin-top: 5px;
+    border: hotpink;
+    border-style: outset;
+    height: 50px;
+    border-radius: 50%; 
+    font-weight: bold;   
+}
+
+.board-user{
+    cursor: default;
+    width: 360px;
+    text-align: center;
+    margin: 0px;
+    margin-top: 1px;
+    border: hotpink;
+    border-style: solid;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.board-container{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.board-avatar{
+    width: 150px;
+    height: 120px;
+    border: hotpink;
+    border-style: inset;
+    border-radius: 20px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.leader-board::-webkit-scrollbar {
+    display: block;
+    width: 5px;
+}
+.leader-board::-webkit-scrollbar-track {
+    background: transparent;
+}
+    
+.leader-board::-webkit-scrollbar-thumb {
+    background-color: red;
+    height: 50px;
+    border-right: none;
+    border-left: none;
+}
+
+.leader-board::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+    margin-bottom: 10px; 
+}
+
+.leader-board::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 10px;
+}
+
+.leader-board{
+    overflow-y: auto;
+    overflow-x: hidden;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    margin-top: 10px;
+    max-height: 550px;
+    border-style: ridge;
+    border-radius: 20px; 
+}
+
+.leader-board-card{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-height: 150px;
+    border-style: ridge;
+    border-radius: 20px;      
+}
+
 .new-question-header{
     border-radius: 20px;
     border-color: chartreuse;
@@ -42,10 +153,13 @@
 
 .submit-question{
     cursor: pointer;
+    font-weight: bold;
     justify-content: space-evenly;
     display: flex;
     border-radius: 20px;
+    padding-top: 5px;
     width: 200px;
+    height: 30px;
     margin-bottom: 20px;
     margin-right: auto;
     margin-left: auto;
@@ -55,6 +169,7 @@
     text-align: center;
     width: 150px;
     font-size: 15px;
+    font-weight: bold;
 }
 legend{
     font-weight: bold;
@@ -125,6 +240,7 @@ fieldset {
     margin-top: 0px;
     width: 250px;
     padding: 5px;
+    font-size: 14px;
     word-wrap: break-word;
     border: hotpink;
     border-style:solid;
@@ -341,7 +457,7 @@ fieldset {
     flex-direction: row;
     justify-content: center;
     height: 40px;
-    min-width: 900px;
+    min-width: 800px;
 }
 
 .input-pass{

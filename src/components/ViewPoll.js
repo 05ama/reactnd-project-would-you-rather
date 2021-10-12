@@ -41,18 +41,17 @@ class ViewPoll extends Component{
     
     render(){
         const { TotalVoters, totalOptionOneVoters,totalOptionTwoVoters,optionOneVoted,optionTwoVoted } = this.props ;
-        console.log(this.state.isAnswered)
         return(
             this.state.isAnswered === false?
             <div>
                 <NavBar/>  
                 <div className="app-main-container-poll"> 
-                    <img className="poll-user-avatar" src={this.props.authorAvatarUrl}/>
+                    <p className="asked-by">Asked by <img className="poll-user-avatar" src={this.props.authorAvatarUrl}/>{this.props.authorName}</p>
                     <div className="poll-container"> 
-                        <h4 className="question-text">Would you rather ?</h4> 
+                        <h4 className="question-text">Would you rather</h4> 
                         <div className="poll-container">
-                            <p className="poll-text"> <input onChange={this.enableSubmit} type="radio" name="poll" value="optionOne" /> {this.props.questionOptionOne.text}</p>
-                            <p className="poll-text"> <input onChange={this.enableSubmit} type="radio" name="poll" value="optionTwo" /> {this.props.questionOptionTwo.text}</p>                      
+                            <p className="poll-text"> <input onChange={this.enableSubmit} type="radio" name="poll" value="optionOne" /> {this.props.questionOptionOne.text+ " ?!"}</p>
+                            <p className="poll-text"> <input onChange={this.enableSubmit} type="radio" name="poll" value="optionTwo" /> {this.props.questionOptionTwo.text+ " ?!"}</p>                      
                         </div> 
                         <button disabled ={this.state.notSelected} onClick={this.submitAnswer} className="poll-btn-submit">Submit</button>
                     </div>                        
