@@ -1,10 +1,10 @@
 # Would You Rather Project
 
-This is the starter code for the final assessment project for Udacity's React & Redux course.
+This Project starts with three default users each of default password:"123"
+In this project you will be able to: Login / vote for questions / create new 
+questions / check Leader board in addition to that you can also create a new 
+User and choose an avatar for it.
 
-The `_DATA.js` file represents a fake database and methods that let you access the data. The only thing you need to edit in the ` _DATA.js` file is the value of `avatarURL`. Each user should have an avatar, so you’ll need to add the path to each user’s avatar.
-
-Using the provided starter code, you'll build a React/Redux front end for the application. We recommend using the [Create React App](https://github.com/facebook/create-react-app) to bootstrap the project.
 
 ## Data
 
@@ -52,6 +52,7 @@ Your code will talk to the database via 4 methods:
 * `_getQuestions()`
 * `_saveQuestion(question)`
 * `_saveQuestionAnswer(object)`
+* `_createUser(object)`
 
 1) `_getUsers()` Method
 
@@ -95,6 +96,15 @@ Your code will talk to the database via 4 methods:
 | qid | String | The id of the question that was answered|
 | answer | String | The option the user selected. The value should be either `"optionOne"` or `"optionTwo"`|
 
-## Contributing
 
-This repository is the starter code for *all* Udacity students. Therefore, we most likely will not accept pull requests. For details, check out [CONTRIBUTING.md](https://github.com/udacity/reactnd-project-would-you-rather-starter/blob/master/CONTRIBUTING.md).
+5) `_createUser(object)` Method
+
+*Description*: Save a new user in the database.
+*Parameters*: Object that contains the following properties: `id`, `name`, `avatarURL` , and `password`. More details about these properties:
+
+| Attribute | Type | Description |
+|-----------------|------------------|-------------------|
+| id | String | The id of the new user|
+| name | String | The name of the new user|
+| avatarURL | String | The avatar URL source|
+|password | String | The new user password|
