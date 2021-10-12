@@ -35,7 +35,7 @@ class LogIn extends Component{
         if(this.state.password === this.state.inputPassword) 
         {
             this.props.dispatch(successLogIn(this.state.selectedId));
-            this.props.history.push('/home') 
+            this.props.history.push(this.props.match.params) 
         }else{
             alert("Wrong Password!")
         }

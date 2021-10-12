@@ -1,3 +1,25 @@
+.error{
+    color: rgb(21, 13, 138);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    min-width: 500px;
+    align-items: center;
+    cursor: default;
+}
+
+.error-head{
+    color: rgb(21, 13, 138);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.error-button{
+    cursor: pointer;
+    width: 150px;
+}
+
 .input-error{
     color: red;
     font-weight: bold;
