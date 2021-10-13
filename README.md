@@ -6,6 +6,13 @@ questions / check Leader board in addition to that you can also create a new
 User and choose an avatar for it.
 
 
+## Starting 
+
+To start using this project you need to install dependencies
+you can use "npm install" command in the project root directory
+after successully installing the dependencies use "npm start" to 
+launch the project.
+
 ## Data
 
 There are two types of objects stored in our database:
